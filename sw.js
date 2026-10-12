@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261012-finalcheck-2008';
+const VERSION = '20261012-raster-lines-2035';
 const BASE = new URL('./', self.registration.scope);
 const PREFIX = 'measurement-drawing-' + encodeURIComponent(BASE.href) + '-';
 const CACHE = PREFIX + VERSION;
