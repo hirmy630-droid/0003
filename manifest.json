@@ -1,14 +1,25 @@
 {
-  "name": "材料取りツール",
-  "short_name": "材取PC",
+  "id": "./index.html",
+  "name": "測定図",
+  "short_name": "測定図",
+  "lang": "ja",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "orientation": "landscape",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#edf1f5",
+  "theme_color": "#14283e",
   "icons": [
-    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
