@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261012-control-background-1852';
+const VERSION = '20261012-area-totals-footer-1924';
 const BASE = new URL('./', self.registration.scope);
 const PREFIX = 'measurement-drawing-' + encodeURIComponent(BASE.href) + '-';
 const CACHE = PREFIX + VERSION;
