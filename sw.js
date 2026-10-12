@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261012-154439';
+const VERSION = '20261012-dimension-offset-1715';
 const BASE = new URL('./', self.registration.scope);
 const PREFIX = 'measurement-drawing-' + encodeURIComponent(BASE.href) + '-';
 const CACHE = PREFIX + VERSION;
