@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = '20261012-pencil-2127';
+const VERSION = '20261012-measure-edit-2207';
 const BASE = new URL('./', self.registration.scope);
 const PREFIX = 'measurement-drawing-' + encodeURIComponent(BASE.href) + '-';
 const CACHE = PREFIX + VERSION;
@@ -12,8 +12,10 @@ self.addEventListener('install', event => {
       const cache = await caches.open(CACHE);
       for (const name of ASSETS) {
         const url = new URL(name, BASE).href;
-        const response = await fetch(new Request(url, {cache:'reload'}));
-        if (!response.ok) throw new Error('Required asset unavailable: ' + name);
+        let response;
+        try { response = await fetch(new Request(url, {cache:'reload'})); }
+        catch (error) { if (name === 'index.html') throw error; continue; }
+        if (!response.ok) { if (name === 'index.html') throw new Error('Required asset unavailable: ' + name); continue; }
         await cache.put(url, response);
       }
       await self.skipWaiting();
